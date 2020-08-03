@@ -13,7 +13,7 @@ if (!R::testConnection()) {
     R::setup('mysql:host=localhost; dbname=redbean', 'root', '');
 }
 
-define("ROOT", "http://localhost/base");
+define("ROOT", "http://localhost/my_mvc");
 define("APP_NAME", "Meu Site");
 define("MAIL", [
     'host' => 'smtp.gmail.com',
