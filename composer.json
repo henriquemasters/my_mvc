@@ -1,0 +1,27 @@
+{
+    "name": "gh/base",
+    "description": "Pequeno Framework proprietario em PHP",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Henrique Mariano",
+            "email": "henrique.masters@gmail.comn"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "gabordemooij/redbean": "dev-master",
+        "coffeecode/router": "dev-master",
+        "league/plates": "^4.0@dev",
+        "phpmailer/phpmailer": "6.0.*",
+        "plasticbrain/php-flash-messages": "dev-master"
+    }
+}

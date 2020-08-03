@@ -1,0 +1,14 @@
+/* 
+    Created on : 01/08/2020, 20:29:53
+    Author     : GH
+*/
+section.content{
+    background-color: yellow;
+    min-height: 400px;
+    padding: 50px 0;
+}
+
+.form-horizontal label {
+    font-size: .8em;
+    font-weight: bold;
+}
