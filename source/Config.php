@@ -16,13 +16,13 @@ if (!R::testConnection()) {
 define("ROOT", "http://localhost/my_mvc");
 define("APP_NAME", "Meu Site");
 define("MAIL", [
-    'host' => 'smtp.gmail.com',
+    'host' => 'servidor_smtp',
     'port' => 465,
     'secure' => 'ssl',
-    'user' => 'henrique.masters@gmail.com',
+    'user' => 'email_de_envio',
     'pwd' => '',
     'from_name' => 'Meu Site',
-    'from_email' => 'henrique.masters@gmail.com'
+    'from_email' => 'email_de_envio'
 ]);
 
 /**
