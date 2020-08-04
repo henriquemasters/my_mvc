@@ -2,7 +2,7 @@
     "name": "gh/base",
     "description": "Pequeno Framework proprietario em PHP",
     "minimum-stability": "dev",
-    "license": "proprietary",
+    "license": "mit",
     "authors": [
         {
             "name": "Henrique Mariano",

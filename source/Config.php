@@ -33,3 +33,17 @@ define("MAIL", [
 function url(string $uri = null): string {
     return ($uri) ? ROOT . "/{$uri}" : ROOT;
 }
+
+/**
+ *
+ * @param string $uri
+ * @param type $class
+ * @return string
+ */
+function is(string $uri = null, $class = 'active'): string {
+    $parts = null;
+    if (isset($_SERVER['REDIRECT_QUERY_STRING'])) {
+        $parts = explode('/', str_replace('route=/', '', $_SERVER['REDIRECT_QUERY_STRING']));
+    }
+    return ($parts[0] == $uri) ? $class : '';
+}
