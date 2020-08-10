@@ -157,10 +157,11 @@ class Web {
     /**
      *
      * @param array $data
+     * @param string $view
      * @return string
      */
-    private function doHtml(array $data): string {
-        return $this->view->render('emails/contato', ['datas' => $data]);
+    private function doHtml(array $data, string $view = 'emails/contato'): string {
+        return $this->view->render($view, ['datas' => $data]);
     }
 
 }
