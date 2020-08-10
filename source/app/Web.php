@@ -142,7 +142,7 @@ class Web {
             $mail->Subject = 'Contato - Uma Nova Mensagem ' . date('d-m-Y H:i:s');
 
             // Conteúdo Aqui...
-            $mail->Body = '<pre>' . var_export($data, true) . '</pre>';
+            $mail->Body = $this->doHtml($data);
             $mail->AltBody = '<pre>' . var_export($data, true) . '</pre>';
 
             //  $mail->SMTPDebug = 2;
@@ -152,6 +152,15 @@ class Web {
         } catch (Exception $exc) {
             return false;
         }
+    }
+
+    /**
+     *
+     * @param array $data
+     * @return string
+     */
+    private function doHtml(array $data): string {
+        return $this->view->render('emails/contato', ['datas' => $data]);
     }
 
 }
