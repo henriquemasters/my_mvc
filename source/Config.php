@@ -16,13 +16,13 @@ if (!R::testConnection()) {
 define("ROOT", "https://localhost/my_mvc");
 define("APP_NAME", "MyMVC Localhost");
 define("MAIL", [
-    'host' => 'mail.hmsilva.tec.br',
+    'host' => 'mail.mydomain.br',
     'port' => 465,
     'secure' => 'ssl',
-    'user' => 'site@hmsilva.tec.br',
-    'pwd' => 'gelia@85978054',
+    'user' => 'site@mydomain.br',
+    'pwd' => 'yourpassword',
     'from_name' => 'MyMVC Localhost',
-    'from_email' => 'site@hmsilva.tec.br'
+    'from_email' => 'site@mydomain.br'
 ]);
 
 /**
