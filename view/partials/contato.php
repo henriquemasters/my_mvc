@@ -30,6 +30,13 @@
                         <textarea class="form-control" id="message" name="message" placeholder="Deixe sua Mensagem aqui..." required="" style="resize: none; height: 100px"></textarea>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <div class="col-md-6">
+                        <div class="g-recaptcha pull-right" data-sitekey="6LcFHNgZAAAAABsrec4xW4qA_bVr9611rdq7tbSj" style="padding-bottom: 14px;"></div>
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-primary pull-right"><i class="fa fa-paper-plane"></i> Enviar Mensagem</button>
@@ -42,6 +49,7 @@
 
 <?php $v->start('scripts') ?>
 <script src="<?= url('assets/js/jquery.maskedinput.min.js') ?>"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
     $(function () {

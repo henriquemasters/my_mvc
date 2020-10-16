@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27d597d5ffffa99ba44eb3c685e4f563",
+    "content-hash": "a55120cd41269cc6e3179f94ded3b31d",
     "packages": [
         {
             "name": "coffeecode/router",
@@ -57,12 +57,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabordemooij/redbean.git",
-                "reference": "41131338b249fee28746e1636515fb79b38f5e89"
+                "reference": "6b589df8bcf63b9b8525c50a5c1575e20a14de1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/41131338b249fee28746e1636515fb79b38f5e89",
-                "reference": "41131338b249fee28746e1636515fb79b38f5e89",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/6b589df8bcf63b9b8525c50a5c1575e20a14de1b",
+                "reference": "6b589df8bcf63b9b8525c50a5c1575e20a14de1b",
                 "shasum": ""
             },
             "require": {
@@ -90,7 +90,54 @@
             "keywords": [
                 "orm"
             ],
-            "time": "2020-08-01T10:42:30+00:00"
+            "time": "2020-10-03T14:18:27+00:00"
+        },
+        {
+            "name": "google/recaptcha",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/google/recaptcha.git",
+                "reference": "f911286ad361c9fba1b422c07f040852c0c193a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/f911286ad361c9fba1b422c07f040852c0c193a3",
+                "reference": "f911286ad361c9fba1b422c07f040852c0c193a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.2.20|^2.15",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^4.8.36|^5.7.27|^6.59|^7.5.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ReCaptcha\\": "src/ReCaptcha"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Client library for reCAPTCHA, a free service that protects websites from spam and abuse.",
+            "homepage": "https://www.google.com/recaptcha/",
+            "keywords": [
+                "Abuse",
+                "captcha",
+                "recaptcha",
+                "spam"
+            ],
+            "time": "2020-10-01T15:14:41+00:00"
         },
         {
             "name": "league/plates",
@@ -278,7 +325,8 @@
         "gabordemooij/redbean": 20,
         "coffeecode/router": 20,
         "league/plates": 20,
-        "plasticbrain/php-flash-messages": 20
+        "plasticbrain/php-flash-messages": 20,
+        "google/recaptcha": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

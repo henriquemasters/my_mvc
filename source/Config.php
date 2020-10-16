@@ -13,15 +13,15 @@ if (!R::testConnection()) {
     R::setup('mysql:host=localhost; dbname=redbean', 'root', '');
 }
 
-define("ROOT", "https://hmsilva.tec.br");
-define("APP_NAME", "HMSilva TEC");
+define("ROOT", "https://localhost/my_mvc");
+define("APP_NAME", "MyMVC Localhost");
 define("MAIL", [
     'host' => 'mail.hmsilva.tec.br',
     'port' => 465,
     'secure' => 'ssl',
     'user' => 'site@hmsilva.tec.br',
     'pwd' => 'gelia@85978054',
-    'from_name' => 'HMSilva TEC',
+    'from_name' => 'MyMVC Localhost',
     'from_email' => 'site@hmsilva.tec.br'
 ]);
 

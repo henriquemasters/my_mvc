@@ -3,6 +3,7 @@
 namespace Source\App;
 
 use League\Plates\Engine;
+use ReCaptcha\ReCaptcha;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use Plasticbrain\FlashMessages\FlashMessages;
@@ -99,10 +100,18 @@ class Web {
      * @return void
      */
     public function sendContact(array $data): void {
-        if ($this->doMailContact($data)) {
-            $this->msg->success('Mensagem enviada com sucesso. Em breve entraremos em contato com você.', ROOT . '/contato');
+        $recaptcha = new ReCaptcha('6LcFHNgZAAAAAHxYJG6sBw1FFhekfFBnwjA3YeXI');
+        $resp = $recaptcha->verify($data['g-recaptcha-response']);
+        unset($data['g-recaptcha-response']);
+
+        if ($resp->isSuccess()) {
+            if ($this->doMailContact($data)) {
+                $this->msg->success('Mensagem enviada com sucesso. Em breve entraremos em contato com você.', ROOT . '/contato');
+            } else {
+                $this->msg->error('Erro ao tentar enviar mensagem! Entre em contato conosco através de outro canal.', ROOT . '/contato');
+            }
         } else {
-            $this->msg->error('Erro ao tentar enviar mensagem! Entre em contato conosco através de outro canal.', ROOT . '/contato');
+            $this->msg->error('Houve um erro antes de tentar enviar a mensagem! Entre em contato conosco através de outro canal.', ROOT . '/contato');
         }
     }
 
