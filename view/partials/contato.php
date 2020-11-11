@@ -33,7 +33,7 @@
 
                 <div class="form-group">
                     <div class="col-md-6">
-                        <div class="g-recaptcha pull-right" data-sitekey="6LcFHNgZAAAAABsrec4xW4qA_bVr9611rdq7tbSj" style="padding-bottom: 14px;"></div>
+                        <div class="g-recaptcha pull-right" data-sitekey="" style="padding-bottom: 14px;"></div>
                     </div>
                 </div>
 
