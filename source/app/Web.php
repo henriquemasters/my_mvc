@@ -100,7 +100,7 @@ class Web {
      * @return void
      */
     public function sendContact(array $data): void {
-        $recaptcha = new ReCaptcha('6LcFHNgZAAAAAHxYJG6sBw1FFhekfFBnwjA3YeXI');
+        $recaptcha = new ReCaptcha('private_key_here');
         $resp = $recaptcha->verify($data['g-recaptcha-response']);
         unset($data['g-recaptcha-response']);
 
